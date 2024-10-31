@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **id_unit** | **int** | Internal ID of Unit, unique across all Units |
 **note** | **string** | A note for this unit |
 **listing_price** | **int** | Listing price, available only for Seller |
-**minimum_price** | **int** | Minimum price, available only for Seller with Tiefstpreisautomatik |
+**minimum_price** | **int** | Minimum price, available only for Seller with Smart Pricing feature enabled |
 **price** | **int** | Price at which this unit will be offered on Kaufland.de |
 **id_offer** | **string** | Seller&#39;s unique ID for offer(s) |
 **id_product** | **int** | Internal ID of Product, unique across all Products |
@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **transport_time_max** | **int** | Transport time maximum |
 **product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  | [optional]
 **fulfillment_type** | [**\KauflandSellerApi\Model\FulfillmentType**](FulfillmentType.md) |  |
+**vat_indicator** | [**\KauflandSellerApi\Model\VatIndicator**](VatIndicator.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -89,7 +89,9 @@ Class | Method | HTTP request | Description
 *AttributesApi* | [**getAttributeByName**](docs/Api/AttributesApi.md#getattributebyname) | **GET** /attributes/by-name/{name} | Get attribute by name
 *AttributesApi* | [**getAttributeList**](docs/Api/AttributesApi.md#getattributelist) | **GET** /attributes | Get an attribute list
 *AttributesApi* | [**getAttributeListBySearch**](docs/Api/AttributesApi.md#getattributelistbysearch) | **GET** /attributes/search | Get attributes by search term
+*AttributesApi* | [**getSharedSetCsvFileByAttributeId**](docs/Api/AttributesApi.md#getsharedsetcsvfilebyattributeid) | **GET** /attributes/{id_attribute}/shared-set-values | Get the URL of a CSV file containing the shared set values for a specific attribute ID
 *AttributesApi* | [**getSharedSetListBySearchAndAttributeId**](docs/Api/AttributesApi.md#getsharedsetlistbysearchandattributeid) | **GET** /attributes/{id_attribute}/shared-set | Get shared-set by search term and attribute id
+*BuyboxApi* | [**getOffersRankings**](docs/Api/BuyboxApi.md#getoffersrankings) | **GET** /buybox | Get a list of offers rankings for a product
 *CarriersApi* | [**getCarriers**](docs/Api/CarriersApi.md#getcarriers) | **GET** /carriers | Get a list of available carriers
 *CategoriesApi* | [**decideCategory**](docs/Api/CategoriesApi.md#decidecategory) | **POST** /categories/decide | Guess categories
 *CategoriesApi* | [**getCategoriesList**](docs/Api/CategoriesApi.md#getcategorieslist) | **GET** /categories | Get category list by search term
@@ -106,6 +108,7 @@ Class | Method | HTTP request | Description
 *ImportFilesApi* | [**getOrderCommandImportFiles**](docs/Api/ImportFilesApi.md#getordercommandimportfiles) | **GET** /import-files/order-command | Get a list of your order command import files
 *InfoApi* | [**getAllLocales**](docs/Api/InfoApi.md#getalllocales) | **GET** /info/locale | Get values for parameter &#39;locale&#39;
 *InfoApi* | [**getAllStorefronts**](docs/Api/InfoApi.md#getallstorefronts) | **GET** /info/storefront | Get values for parameter &#39;storefront&#39;
+*InfoApi* | [**getVatIndicators**](docs/Api/InfoApi.md#getvatindicators) | **GET** /info/vat-indicators | Get a list of Vat Indicators Mappings per Storefront
 *OrderInvoicesApi* | [**deleteOrderInvoice**](docs/Api/OrderInvoicesApi.md#deleteorderinvoice) | **DELETE** /order-invoices/{id_order}/{id_invoice} | Delete an order invoice by given order ID and invoice ID
 *OrderInvoicesApi* | [**getOrderInvoice**](docs/Api/OrderInvoicesApi.md#getorderinvoice) | **GET** /order-invoices/{id_order}/{id_invoice} | Get an order invoice by order ID and invoice ID
 *OrderInvoicesApi* | [**getOrderInvoices**](docs/Api/OrderInvoicesApi.md#getorderinvoices) | **GET** /order-invoices | Get a list of order invoices
@@ -153,6 +156,7 @@ Class | Method | HTTP request | Description
 *ShipmentsApi* | [**addShipment**](docs/Api/ShipmentsApi.md#addshipment) | **POST** /shipments | Add a shipment to an order unit which is already marked as sent.
 *ShippingGroupsApi* | [**getShippingGroup**](docs/Api/ShippingGroupsApi.md#getshippinggroup) | **GET** /shipping-groups/{id_shipping_group} | Get a shipping group by ID
 *ShippingGroupsApi* | [**getShippingGroups**](docs/Api/ShippingGroupsApi.md#getshippinggroups) | **GET** /shipping-groups | Get the list of your predefined shipping groups
+*ShippingLabelsApi* | [**createShippingLabel**](docs/Api/ShippingLabelsApi.md#createshippinglabel) | **POST** /shipping-labels | Request and create a shipping label.
 *StatusApi* | [**ping**](docs/Api/StatusApi.md#ping) | **GET** /status/ping | Ping the Marketplace Seller API by Kaufland
 *SubscriptionsApi* | [**addSubscription**](docs/Api/SubscriptionsApi.md#addsubscription) | **POST** /subscriptions | Subscribe for event
 *SubscriptionsApi* | [**deleteSubscription**](docs/Api/SubscriptionsApi.md#deletesubscription) | **DELETE** /subscriptions/{id_subscription} | Unsubscribe from event
@@ -188,11 +192,14 @@ Class | Method | HTTP request | Description
 - [ApiResponseCarriers](docs/Model/ApiResponseCarriers.md)
 - [ApiResponseCategoryTree](docs/Model/ApiResponseCategoryTree.md)
 - [ApiResponseCategoryWithEmbedded](docs/Model/ApiResponseCategoryWithEmbedded.md)
+- [ApiResponseCountryVatRatesArray](docs/Model/ApiResponseCountryVatRatesArray.md)
+- [ApiResponseCreateShippingLabelResponse](docs/Model/ApiResponseCreateShippingLabelResponse.md)
 - [ApiResponseImportFileInventoryCommand](docs/Model/ApiResponseImportFileInventoryCommand.md)
 - [ApiResponseImportFileInventoryFeed](docs/Model/ApiResponseImportFileInventoryFeed.md)
 - [ApiResponseImportFileOrderCommand](docs/Model/ApiResponseImportFileOrderCommand.md)
 - [ApiResponseInfoLocaleObject](docs/Model/ApiResponseInfoLocaleObject.md)
 - [ApiResponseInitializeReturn](docs/Model/ApiResponseInitializeReturn.md)
+- [ApiResponseOffersRankings](docs/Model/ApiResponseOffersRankings.md)
 - [ApiResponseOpenTicketResponse](docs/Model/ApiResponseOpenTicketResponse.md)
 - [ApiResponseOrderDetails](docs/Model/ApiResponseOrderDetails.md)
 - [ApiResponseOrderInvoice](docs/Model/ApiResponseOrderInvoice.md)
@@ -207,6 +214,7 @@ Class | Method | HTTP request | Description
 - [ApiResponseReturnDetails](docs/Model/ApiResponseReturnDetails.md)
 - [ApiResponseReturnUnitDetails](docs/Model/ApiResponseReturnUnitDetails.md)
 - [ApiResponseShippingGroup](docs/Model/ApiResponseShippingGroup.md)
+- [ApiResponseString](docs/Model/ApiResponseString.md)
 - [ApiResponseStringArray](docs/Model/ApiResponseStringArray.md)
 - [ApiResponseSubscription](docs/Model/ApiResponseSubscription.md)
 - [ApiResponseTicketWithEmbedded](docs/Model/ApiResponseTicketWithEmbedded.md)
@@ -215,6 +223,8 @@ Class | Method | HTTP request | Description
 - [ApiResponseWarehouse](docs/Model/ApiResponseWarehouse.md)
 - [Attribute](docs/Model/Attribute.md)
 - [BookingsReportVersion](docs/Model/BookingsReportVersion.md)
+- [BuyboxCondition](docs/Model/BuyboxCondition.md)
+- [BuyboxUnit](docs/Model/BuyboxUnit.md)
 - [Buyer](docs/Model/Buyer.md)
 - [CancellationType](docs/Model/CancellationType.md)
 - [Carrier](docs/Model/Carrier.md)
@@ -246,6 +256,10 @@ Class | Method | HTTP request | Description
 - [CollectionApiResponseTicketMessage](docs/Model/CollectionApiResponseTicketMessage.md)
 - [CollectionApiResponseUnitEmbedded](docs/Model/CollectionApiResponseUnitEmbedded.md)
 - [CollectionApiResponseWarehouse](docs/Model/CollectionApiResponseWarehouse.md)
+- [ComplianceContact](docs/Model/ComplianceContact.md)
+- [CountryVatRates](docs/Model/CountryVatRates.md)
+- [CreateShippingLabelRequest](docs/Model/CreateShippingLabelRequest.md)
+- [CreateShippingLabelResponse](docs/Model/CreateShippingLabelResponse.md)
 - [CreateTicketMessageRequest](docs/Model/CreateTicketMessageRequest.md)
 - [Currency](docs/Model/Currency.md)
 - [Delivery](docs/Model/Delivery.md)
@@ -267,6 +281,7 @@ Class | Method | HTTP request | Description
 - [Locale](docs/Model/Locale.md)
 - [ModelReturn](docs/Model/ModelReturn.md)
 - [NotFoundResponse](docs/Model/NotFoundResponse.md)
+- [OffersRankings](docs/Model/OffersRankings.md)
 - [OpenTicketRequest](docs/Model/OpenTicketRequest.md)
 - [OpenTicketResponse](docs/Model/OpenTicketResponse.md)
 - [Order](docs/Model/Order.md)
@@ -285,12 +300,15 @@ Class | Method | HTTP request | Description
 - [OrderUnitRefundRequest](docs/Model/OrderUnitRefundRequest.md)
 - [OrderUnitSendRequest](docs/Model/OrderUnitSendRequest.md)
 - [OrderUnitStatus](docs/Model/OrderUnitStatus.md)
+- [PackageMeasurements](docs/Model/PackageMeasurements.md)
 - [Pagination](docs/Model/Pagination.md)
 - [PartialPickSubscriptionCallbackUrlOrFallbackEmailOrEventNameOrIsActiveOrStorefront](docs/Model/PartialPickSubscriptionCallbackUrlOrFallbackEmailOrEventNameOrIsActiveOrStorefront.md)
 - [PickSubscriptionCallbackUrlOrFallbackEmailOrEventName](docs/Model/PickSubscriptionCallbackUrlOrFallbackEmailOrEventName.md)
 - [PickupLocation](docs/Model/PickupLocation.md)
 - [PingMessage](docs/Model/PingMessage.md)
+- [ProblemType](docs/Model/ProblemType.md)
 - [Product](docs/Model/Product.md)
+- [ProductDataAttributes](docs/Model/ProductDataAttributes.md)
 - [ProductDataImportFileResponse](docs/Model/ProductDataImportFileResponse.md)
 - [ProductDataImportFileSorting](docs/Model/ProductDataImportFileSorting.md)
 - [ProductDataImportFileStatus](docs/Model/ProductDataImportFileStatus.md)
@@ -364,11 +382,14 @@ Class | Method | HTTP request | Description
 - [UnitsBulkUpdatedUnit](docs/Model/UnitsBulkUpdatedUnit.md)
 - [UpdateReturn](docs/Model/UpdateReturn.md)
 - [UpdateReturnRequest](docs/Model/UpdateReturnRequest.md)
+- [VatIndicator](docs/Model/VatIndicator.md)
+- [VatRate](docs/Model/VatRate.md)
 - [Warehouse](docs/Model/Warehouse.md)
 - [WarehouseAddress](docs/Model/WarehouseAddress.md)
 - [WarehouseAddressRequest](docs/Model/WarehouseAddressRequest.md)
 - [WarehouseBodyRequest](docs/Model/WarehouseBodyRequest.md)
 - [WriteableUnitStatuses](docs/Model/WriteableUnitStatuses.md)
+- [WriteableVatIndicator](docs/Model/WriteableVatIndicator.md)
 
 ## Authorization
 All endpoints do not require authorization.
@@ -389,6 +410,6 @@ seller-api-support@kaufland-online.de
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.14.1`
+- API version: `2.17.2`
     - Generator version: `7.5.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -29,9 +29,11 @@ Name | Type | Description | Notes
 **billing_address** | [**\KauflandSellerApi\Model\Address**](Address.md) |  |
 **shipping_address** | [**\KauflandSellerApi\Model\Address**](Address.md) |  |
 **product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  |
+**vat** | **float** |  |
 **delivery_attempt_timestamp_iso** | **\DateTime** | The attribute is only responded when explicitly requested as an embedded field | [optional]
 **tickets** | [**\KauflandSellerApi\Model\Ticket[]**](Ticket.md) | The attribute is only responded when explicitly requested as an embedded field | [optional]
 **return_unit** | [**\KauflandSellerApi\Model\OrderUnitDetailsReturnUnit**](OrderUnitDetailsReturnUnit.md) |  | [optional]
 **delivery** | [**\KauflandSellerApi\Model\Delivery**](Delivery.md) |  | [optional]
+**kss_eligible** | **bool** | The attribute is only responded when explicitly requested as an embedded field | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

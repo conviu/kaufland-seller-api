@@ -29,5 +29,6 @@ Name | Type | Description | Notes
 **billing_address** | [**\KauflandSellerApi\Model\Address**](Address.md) |  |
 **shipping_address** | [**\KauflandSellerApi\Model\Address**](Address.md) |  |
 **product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  |
+**vat** | **float** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
