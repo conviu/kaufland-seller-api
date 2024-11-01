@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllLocales()**](InfoApi.md#getAllLocales) | **GET** /info/locale | Get values for parameter &#39;locale&#39;
 [**getAllStorefronts()**](InfoApi.md#getAllStorefronts) | **GET** /info/storefront | Get values for parameter &#39;storefront&#39;
+[**getVatIndicators()**](InfoApi.md#getVatIndicators) | **GET** /info/vat-indicators | Get a list of Vat Indicators Mappings per Storefront
 
 
 ## `getAllLocales()`
@@ -100,6 +101,62 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\KauflandSellerApi\Model\ApiResponseStringArray**](../Model/ApiResponseStringArray.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getVatIndicators()`
+
+```php
+getVatIndicators($storefront): \KauflandSellerApi\Model\ApiResponseCountryVatRatesArray
+```
+
+Get a list of Vat Indicators Mappings per Storefront
+
+This endpoint provides a mapping between vat_indicators and actually used vat rates per storefront. The response yields which vat_indicators is accepted on a given storefront. The vat_indicators can (optionally) be used when creating/updating offers.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new KauflandSellerApi\Api\InfoApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client()
+);
+$storefront = new \KauflandSellerApi\Model\Storefront(); // Storefront | Parameter to select the affected storefront
+
+try {
+    $result = $apiInstance->getVatIndicators($storefront);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling InfoApi->getVatIndicators: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront** | [**Storefront**](../Model/.md)| Parameter to select the affected storefront | [optional]
+
+### Return type
+
+[**\KauflandSellerApi\Model\ApiResponseCountryVatRatesArray**](../Model/ApiResponseCountryVatRatesArray.md)
 
 ### Authorization
 

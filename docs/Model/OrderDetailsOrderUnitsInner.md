@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  |
+**kss_eligible** | **bool** | The attribute is only responded when explicitly requested as an embedded field | [optional]
 **tickets** | [**\KauflandSellerApi\Model\Ticket[]**](Ticket.md) |  |
+**vat** | **float** |  |
+**product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  |
 **cancel_reason** | **string** |  |
 **shipping_rate** | **int** |  |
 **order_received_timestamp_iso** | **\DateTime** |  |

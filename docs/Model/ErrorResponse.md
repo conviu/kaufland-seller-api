@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | [**\KauflandSellerApi\Model\ProblemType**](ProblemType.md) |  | [optional]
 **errors** | [**\KauflandSellerApi\Model\ErrorDetails[]**](ErrorDetails.md) |  |
 **message** | **string** |  |
 

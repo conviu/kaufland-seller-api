@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **transport_time_max** | **int** |  |
 **product** | [**\KauflandSellerApi\Model\Product**](Product.md) |  | [optional]
 **fulfillment_type** | [**\KauflandSellerApi\Model\FulfillmentType**](FulfillmentType.md) |  |
+**vat_indicator** | [**\KauflandSellerApi\Model\VatIndicator**](VatIndicator.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

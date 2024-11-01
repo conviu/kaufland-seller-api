@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**getAttributeByName()**](AttributesApi.md#getAttributeByName) | **GET** /attributes/by-name/{name} | Get attribute by name
 [**getAttributeList()**](AttributesApi.md#getAttributeList) | **GET** /attributes | Get an attribute list
 [**getAttributeListBySearch()**](AttributesApi.md#getAttributeListBySearch) | **GET** /attributes/search | Get attributes by search term
+[**getSharedSetCsvFileByAttributeId()**](AttributesApi.md#getSharedSetCsvFileByAttributeId) | **GET** /attributes/{id_attribute}/shared-set-values | Get the URL of a CSV file containing the shared set values for a specific attribute ID
 [**getSharedSetListBySearchAndAttributeId()**](AttributesApi.md#getSharedSetListBySearchAndAttributeId) | **GET** /attributes/{id_attribute}/shared-set | Get shared-set by search term and attribute id
 
 
@@ -243,6 +244,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\KauflandSellerApi\Model\CollectionApiResponseAttribute**](../Model/CollectionApiResponseAttribute.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getSharedSetCsvFileByAttributeId()`
+
+```php
+getSharedSetCsvFileByAttributeId($id_attribute, $locale): \KauflandSellerApi\Model\ApiResponseString
+```
+
+Get the URL of a CSV file containing the shared set values for a specific attribute ID
+
+Get the URL for a CSV file containing the shared set values for a specific attribute ID. This endpoint returns a signed URL that provides access to the CSV file, which includes all the shared set values associated with the specified attribute. The signed URL is valid for six days
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new KauflandSellerApi\Api\AttributesApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client()
+);
+$id_attribute = 351; // int | The ID of the attribute
+$locale = new \KauflandSellerApi\Model\ProductDataLocale(); // ProductDataLocale | Allows clients to consume the data in languages that are different from the storefront-default locale
+
+try {
+    $result = $apiInstance->getSharedSetCsvFileByAttributeId($id_attribute, $locale);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AttributesApi->getSharedSetCsvFileByAttributeId: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id_attribute** | **int**| The ID of the attribute |
+ **locale** | [**ProductDataLocale**](../Model/.md)| Allows clients to consume the data in languages that are different from the storefront-default locale |
+
+### Return type
+
+[**\KauflandSellerApi\Model\ApiResponseString**](../Model/ApiResponseString.md)
 
 ### Authorization
 

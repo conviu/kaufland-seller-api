@@ -38,7 +38,7 @@ $apiInstance = new KauflandSellerApi\Api\ProductDataApi(
     new GuzzleHttp\Client()
 );
 $locale = new \KauflandSellerApi\Model\Locale(); // Locale | The language code of the product data (ISO 3166-2)
-$product_data_object = {"ean":["4009750243800"],"attributes":{"title":["Chocolat"],"description":["In einem verschlafenen Städtchen in Frankreich im Jahr 1959. ...Doch am Ende zählt nur eins: Die pure Lust am Leben!"],"picture":["https://media.cdn.kaufland.de/product-images/1024x1024/883b961019d9ec22e56719f5a9f3ad22.jpg"]}}; // \KauflandSellerApi\Model\ProductDataObject | JSON contains ean and attributes. Attributes contain all attributes with values
+$product_data_object = {"ean":["4009750243800"],"attributes":{"title":["Chocolat"],"description":["In einem verschlafenen Städtchen in Frankreich im Jahr 1959. ...Doch am Ende zählt nur eins: Die pure Lust am Leben!"],"picture":["https://media.cdn.kaufland.de/product-images/1024x1024/883b961019d9ec22e56719f5a9f3ad22.jpg"],"product_safety_contact":{"name":"Musterbetrieb","email_address":"someone@example.net","address":"Musterstraße 1, Musterstadt, 12345, DE","phone_number":"+491234567890"}}}; // \KauflandSellerApi\Model\ProductDataObject | JSON contains ean and attributes. Attributes contain all attributes with values
 
 try {
     $result = $apiInstance->createProductData($locale, $product_data_object);
